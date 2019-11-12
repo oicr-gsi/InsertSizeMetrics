@@ -57,8 +57,8 @@ task collectInsertSizeMetrics {
 
   meta {
     output_meta : {
-      insertSizeMetrics: "Metrics about the insert size distribution (see https://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics)",
-      histogramReport: "Insert size distribution plot"
+      insertSizeMetrics: "Metrics about the insert size distribution (see https://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics).",
+      histogramReport: "Insert size distribution plot."
     }
   }
 

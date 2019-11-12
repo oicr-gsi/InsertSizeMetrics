@@ -44,8 +44,8 @@ Parameter|Value|Default|Description
 
 Output | Type | Description
 ---|---|---
-`insertSizeMetrics`|File|Metrics about the insert size distribution (see https://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics)
-`histogramReport`|File|Insert size distribution plot
+`insertSizeMetrics`|File|Metrics about the insert size distribution (see https://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics).
+`histogramReport`|File|Insert size distribution plot.
 
 
 ## Niassa + Cromwell
@@ -59,7 +59,17 @@ mvn clean install
 
 * Testing
 ```
-mvn clean verify -Djava_opts="-Xmx1g -XX:+UseG1GC -XX:+UseStringDeduplication" -DrunTestThreads=2 -DskipITs=false -DskipRunITs=false -DworkingDirectory=/path/to/tmp/ -DschedulingHost=niassa_oozie_host -DwebserviceUrl=http://niassa-url:8080 -DwebserviceUser=niassa_user -DwebservicePassword=niassa_user_password -Dcromwell-host=http://cromwell-url:8000
+mvn clean verify \
+-Djava_opts="-Xmx1g -XX:+UseG1GC -XX:+UseStringDeduplication" \
+-DrunTestThreads=2 \
+-DskipITs=false \
+-DskipRunITs=false \
+-DworkingDirectory=/path/to/tmp/ \
+-DschedulingHost=niassa_oozie_host \
+-DwebserviceUrl=http://niassa-url:8080 \
+-DwebserviceUser=niassa_user \
+-DwebservicePassword=niassa_user_password \
+-Dcromwell-host=http://cromwell-url:8000
 ```
 
 ## Support
