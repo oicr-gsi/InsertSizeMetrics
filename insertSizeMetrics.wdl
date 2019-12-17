@@ -44,6 +44,7 @@ task collectInsertSizeMetrics {
     String outputPrefix = "OUTPUT"
     Int jobMemory = 18
     String modules = "picard/2.21.2 rstats/3.6"
+    Int timeout = 12
   }
 
   parameter_meta {
@@ -53,6 +54,7 @@ task collectInsertSizeMetrics {
     outputPrefix: "Output prefix to prefix output file names with."
     jobMemory: "Memory (in GB) allocated for job."
     modules: "Environment module names and version to load (space separated) before command execution."
+    timeout: "Maximum amount of time (in hours) the task can run for."
   }
 
   meta {
@@ -75,6 +77,7 @@ task collectInsertSizeMetrics {
   runtime {
     memory: "~{jobMemory} GB"
     modules: "~{modules}"
+    timeout: "~{timeout}"
   }
 
   output {

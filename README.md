@@ -38,6 +38,7 @@ Parameter|Value|Default|Description
 `collectInsertSizeMetrics.minimumPercent`|Float|0.5|Discard any data categories (out of FR, TANDEM, RF) when generating the histogram (Range: 0 to 1).
 `collectInsertSizeMetrics.jobMemory`|Int|18|Memory (in GB) allocated for job.
 `collectInsertSizeMetrics.modules`|String|"picard/2.21.2 rstats/3.6"|Environment module names and version to load (space separated) before command execution.
+`collectInsertSizeMetrics.timeout`|Int|12|Maximum amount of time (in hours) the task can run for.
 
 
 ### Outputs
