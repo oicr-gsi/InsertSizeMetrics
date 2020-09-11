@@ -65,6 +65,7 @@ task collectInsertSizeMetrics {
   }
 
   command <<<
+    set -eu
     java -Xmx~{jobMemory - 6}G -jar ~{picardJar} \
     CollectInsertSizeMetrics \
     TMP_DIR=picardTmp \
@@ -72,6 +73,45 @@ task collectInsertSizeMetrics {
     OUTPUT="~{outputPrefix}.isize.txt" \
     HISTOGRAM_FILE="~{outputPrefix}.histogram.pdf" \
     MINIMUM_PCT=~{minimumPercent}
+    test -f "~{outputPrefix}.isize.txt" || cat > "~{outputPrefix}.isize.txt" << 'EOI'
+## htsjdk.samtools.metrics.StringHeader
+# CollectInsertSizeMetrics HISTOGRAM_FILE=~{outputPrefix}.histogram.pdf MINIMUM_PCT=~{minimumPercent} INPUT=~{inputBam} OUTPUT=~{outputPrefix}.isize.txt TMP_DIR=[picardTmp] BLAH BLAH BLAH
+## htsjdk.samtools.metrics.StringHeader
+# Picard did not produce a file, so we're faking it.
+EOI
+    # If the histogram is empty, Picard doesn't write out a file, so we will write out a blank PDF file manually
+    test -f "~{outputPrefix}.histogram.pdf" || cat > "~{outputPrefix}.histogram.pdf" << 'EOI'
+%PDF-1.4
+1 0 obj <</Type /Catalog /Pages 2 0 R>>
+endobj
+2 0 obj <</Type /Pages /Kids [3 0 R] /Count 1>>
+endobj
+3 0 obj<</Type /Page /Parent 2 0 R /Resources 4 0 R /MediaBox [0 0 500 800] /Contents 6 0 R>>
+endobj
+4 0 obj<</Font <</F1 5 0 R>> >>
+endobj
+5 0 obj<</Type /Font /Subtype /Type1 /BaseFont /Helvetica>>
+endobj
+6 0 obj
+<</Length 59>>
+stream
+BT /F1 24 Tf 75 720 Td (Picard produced no histogram)Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f
+0000000009 00000 n
+0000000056 00000 n
+0000000111 00000 n
+0000000212 00000 n
+0000000250 00000 n
+0000000317 00000 n
+trailer <</Size 7/Root 1 0 R>>
+startxref
+406
+%%EOF
+EOI
   >>>
 
   runtime {

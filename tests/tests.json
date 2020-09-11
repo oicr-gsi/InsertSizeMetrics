@@ -22,6 +22,15 @@
       }
     },
     {
+      "id": "no_reslts",
+      "parameters": {
+        "wdl_inputs": {
+          "insertSizeMetrics.inputBam": "/.mounts/labs/gsi/testdata/insertSizeMetrics/input_data/COMPDOWN_0003_Lv_M_WG_downsample40X-PCSI-0785-Lv-M.filter.deduped.realigned.recalibrated.bam",
+          "insertSizeMetrics.outputFileNamePrefix": "COMPDOWN_0003_Lv_M_WG_downsample40X-PCSI-0785-Lv-M"
+        }
+      }
+    },
+    {
       "id": "no_output_prefix",
       "parameters": {
         "wdl_inputs": {
