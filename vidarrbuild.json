@@ -1,0 +1,6 @@
+{
+    "names": [
+        "insertSizeMetrics_call_ready"
+    ],
+    "wdl": "insertSizeMetrics.wdl"
+}
