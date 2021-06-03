@@ -1,0 +1,7 @@
+{
+    "names": [
+	    "insertSizeMetrics_call_ready",
+	    "insertSizeMetrics_by_tumor_group"
+    ],
+    "wdl": "insertSizeMetrics.wdl"
+}

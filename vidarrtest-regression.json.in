@@ -1,0 +1,104 @@
+[
+    {
+        "arguments": {
+            "insertSizeMetrics.collectInsertSizeMetrics.jobMemory": null,
+            "insertSizeMetrics.collectInsertSizeMetrics.minimumPercent": null,
+            "insertSizeMetrics.collectInsertSizeMetrics.modules": null,
+            "insertSizeMetrics.collectInsertSizeMetrics.picardJar": null,
+            "insertSizeMetrics.collectInsertSizeMetrics.timeout": null,
+            "insertSizeMetrics.inputBam": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/insertSizeMetrics/input_data/PCSI_0090_Pa_P_PE_501_WG_526_170203_D00343_0160_ACACFLANXX_CCGTCC_L008_001.annotated.chr22.bam",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "insertSizeMetrics.outputFileNamePrefix": "PCSI_0090_Pa_P_PE_501_WG_526_170203_D00343_0160_ACACFLANXX_CCGTCC_L008_001"
+        },
+        "description": "InsertSizeMetrics workflow test",
+        "engineArguments": {},
+        "id": "test_01_basic",
+        "metadata": {
+            "insertSizeMetrics.histogramReport": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_InsertSizeMetrics_test_01_basic_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "insertSizeMetrics.insertSizeMetrics": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_InsertSizeMetrics_test_01_basic_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/insertSizeMetrics/output_metrics/test_01_basic.metrics",
+                "type": "script"
+            }
+        ]
+    },
+    {
+        "arguments": {
+            "insertSizeMetrics.collectInsertSizeMetrics.jobMemory": null,
+            "insertSizeMetrics.collectInsertSizeMetrics.minimumPercent": null,
+            "insertSizeMetrics.collectInsertSizeMetrics.modules": null,
+            "insertSizeMetrics.collectInsertSizeMetrics.picardJar": null,
+            "insertSizeMetrics.collectInsertSizeMetrics.timeout": null,
+            "insertSizeMetrics.inputBam": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/insertSizeMetrics/input_data/PCSI_0090_Pa_P_PE_501_WG_526_170203_D00343_0160_ACACFLANXX_CCGTCC_L008_001.annotated.chr22.bam",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "insertSizeMetrics.outputFileNamePrefix": null
+        },
+        "description": "InsertSizeMetrics workflow test",
+        "engineArguments": {},
+        "id": "no_output_prefix",
+        "metadata": {
+            "insertSizeMetrics.histogramReport": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_InsertSizeMetrics_no_output_prefix_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "insertSizeMetrics.insertSizeMetrics": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_InsertSizeMetrics_no_output_prefix_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/insertSizeMetrics/output_metrics/no_output_prefix.metrics",
+                "type": "script"
+            }
+        ]
+    }
+]
