@@ -21,7 +21,10 @@
             "insertSizeMetrics.outputFileNamePrefix": "PCSI_0090_Pa_P_PE_501_WG_526_170203_D00343_0160_ACACFLANXX_CCGTCC_L008_001"
         },
         "description": "InsertSizeMetrics workflow test",
-        "engineArguments": {},
+        "engineArguments": {
+	   "write_to_cache": false,
+	   "read_from_cache": false
+	},
         "id": "test_01_basic",
         "metadata": {
             "insertSizeMetrics.histogramReport": {
@@ -72,7 +75,10 @@
             "insertSizeMetrics.outputFileNamePrefix": null
         },
         "description": "InsertSizeMetrics workflow test",
-        "engineArguments": {},
+        "engineArguments": {
+	   "write_to_cache": false,
+	   "read_from_cache": false
+	},
         "id": "no_output_prefix",
         "metadata": {
             "insertSizeMetrics.histogramReport": {
