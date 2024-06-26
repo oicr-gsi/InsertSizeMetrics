@@ -33,6 +33,16 @@ workflow insertSizeMetrics {
       name: "rstats/3.6",
       url: "https://www.r-project.org/"
     }]
+    output_meta: {
+      insertSizeMetrics: {
+        description: "Metrics file with insert size data",
+        vidarr_label: "insertSizeMetrics"
+      },
+      histogramReport: {
+        description: "Histogram Report",
+        vidarr_label: "histogramReport"
+      }
+    }
   }
 }
 

@@ -1,0 +1,16 @@
+## Commands
+This section lists command(s) run by InsertSizeMetrics workflow
+
+* Running InsertSizeMetrics
+
+### Running InsertSizeMetrics walker with picard
+
+```
+    java -Xmx~{jobMemory - 6}G -jar ~{picardJar} \
+    CollectInsertSizeMetrics \
+    TMP_DIR=picardTmp \
+    INPUT=~{inputBam} \
+    OUTPUT="~{outputPrefix}.isize.txt" \
+    HISTOGRAM_FILE="~{outputPrefix}.histogram.pdf" \
+    MINIMUM_PCT=~{minimumPercent}
+```
