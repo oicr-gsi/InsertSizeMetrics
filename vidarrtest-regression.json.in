@@ -8,7 +8,7 @@
             "insertSizeMetrics.collectInsertSizeMetrics.timeout": null,
             "insertSizeMetrics.inputBam": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/insertSizeMetrics/input_data/PCSI_0090_Pa_P_PE_501_WG_526_170203_D00343_0160_ACACFLANXX_CCGTCC_L008_001.annotated.chr22.bam",
+                    "configuration": "/.mounts/labs/gsi/testdata/insertSizeMetrics/test_inputs/Test.annotated.chr22.bam",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -18,7 +18,7 @@
                 },
                 "type": "EXTERNAL"
             },
-            "insertSizeMetrics.outputFileNamePrefix": "PCSI_0090_Pa_P_PE_501_WG_526_170203_D00343_0160_ACACFLANXX_CCGTCC_L008_001"
+            "insertSizeMetrics.outputFileNamePrefix": "PCSI_Test"
         },
         "description": "InsertSizeMetrics workflow test",
         "engineArguments": {
@@ -48,7 +48,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/insertSizeMetrics/output_metrics/test_01_basic.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/insertSizeMetrics/output_metrics/workflow_test_01.metrics",
                 "type": "script"
             }
         ]
@@ -62,7 +62,7 @@
             "insertSizeMetrics.collectInsertSizeMetrics.timeout": null,
             "insertSizeMetrics.inputBam": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/insertSizeMetrics/input_data/PCSI_0090_Pa_P_PE_501_WG_526_170203_D00343_0160_ACACFLANXX_CCGTCC_L008_001.annotated.chr22.bam",
+                    "configuration": "/.mounts/labs/gsi/testdata/insertSizeMetrics/test_inputs/Test.annotated.chr22.bam",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -102,7 +102,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/insertSizeMetrics/output_metrics/no_output_prefix.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/insertSizeMetrics/output_metrics/workflow_test_02.metrics",
                 "type": "script"
             }
         ]
