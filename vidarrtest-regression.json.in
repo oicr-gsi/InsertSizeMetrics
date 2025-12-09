@@ -48,7 +48,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/insertSizeMetrics/output_metrics/workflow_test_01.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/insertSizeMetrics/output_metrics/test_01_basic.metrics",
                 "type": "script"
             }
         ]
@@ -102,7 +102,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/insertSizeMetrics/output_metrics/workflow_test_02.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/insertSizeMetrics/output_metrics/no_output_prefix.metrics",
                 "type": "script"
             }
         ]
