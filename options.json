@@ -1,0 +1,6 @@
+{
+  "default_runtime_attributes": {
+    "docker": "g3chen/insertsizemetrics@sha256:679690868d0eb02a83ccbe3655a109daefb8f69983b8e17a1b4190310e852e83",
+    "docker_volume": "/home/ubuntu/Downloads/sample_data:/data"
+  }
+}
